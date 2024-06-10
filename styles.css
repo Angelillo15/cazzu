@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+  font-family: atomic;
+  src: url(https://cdn.lavelada.dev/fonts/font-atomic.woff2);
+}
+
+a {
+  text-decoration: none;
+}
+      
+a:visited {
+  color: #D080EC;
+}
+
+.purple-glow-gradient {
+  background: #D080EC;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #D080EC 0%,
+    #9673d4 50%,
+    #D080EC 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+.pulse {
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: pulse 5s ease infinite;
+}
+
+.house {
+  color: "white";
+}
+
+.house:hover {
+  position: relative;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: pulse 5s ease infinite;
+
+  background: #D080EC;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #D080EC 0%,
+    #9673d4 50%,
+    #D080EC 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 80px #D080EC);
+  }
+  50% {
+    filter: drop-shadow(0 0 40px #9673d4);
+  }
+  100% {
+    filter: drop-shadow(0 0 80px #D080EC);
+  }
