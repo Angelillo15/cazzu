@@ -1,38 +1,81 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Cazzu</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://kit.fontawesome.com/748a1f1072.js" crossorigin="anonymous"></script>
-  </head>
-  <body bgcolor="#18181b" text="white"> <font face="Roboto">
-    <header>
-      <font face="atomic" color="#D080EC" size="6" weight="800">
-        <b><h1 align="center" class="text-8xl m-4 pulse purple-glow-gradient">cazzu</h1></b>
-      </font>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cazzu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/748a1f1072.js" crossorigin="anonymous"></script>
+</head>
+
+<body bgcolor="#18181b" text="white">
+  <font face="Roboto">
+    <header id="nav-active" class="cursor-pointer">
+      <h1 class="atomic text-8xl m-4 pulse purple-glow-gradient text-center mt-8 lg:mt-4">cazzu</h1>
     </header>
-    <hr>
-    <nav align="center">
-      <font color="white" size="5">
-        <a href="index.html"><b> Inicio </b></a>
-      </font>
+
+    <nav class="modal font-sans absolute" id="nav">
+      <ul class="navbar flex flex-wrap bg-stone-900 justify-center p-2 rounded-xl gap-x-16 gap-y-4 p-4" id="nav">
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Inicio </b></a>
+        </li>
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Biografia </b></a>
+        </li>
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Discografia </b></a>
+        </li>
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Hits globales </b></a>
+        </li>
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Movistar Arena </b></a>
+        </li>
+        <li class="navitem">
+          <a class="text-3xl" href="index.html"><b> Premios </b></a>
+        </li>
+        <hr>
+        <li>
+          <button class="text-3xl navitem font-bold" id="close">
+            Cerrar
+          </button>
+        </li>
+      </ul>      
     </nav>
-    <hr>
-    <section class="my-2">
-      <p class="text-center">
-        Julieta Emilia Cazzuchelli (Fraile Pintado, 16 de diciembre de 1993), conocida por su nombre artístico Cazzu, es una cantante, compositora, modelo, empresaria y productora musical argentina de trap latino, urbano, rock, reguetón, folclore y diversos géneros musicales.
-      </p>
-      <section class="flex flex-row justify-center gap-5 mt-2">
-        <img src="assets/cazzu1.jpg" class="rounded-lg h-64 hover:scale-110 transition-all">
-        <img src="assets/cazzu2.jpg" class="rounded-lg h-64 hover:scale-110 transition-all">
-      </section>
+
+    <section class="m-4 flex flex-col gap-6 md:flex-row md:gap-8 xl:gap-32 items-center justify-center">
+      <img src="assets/header.jpg" alt="Cazzu concert" class="rounded-xl w-[32rem]">
+      <div class="flex justify-center align-center min-">
+        <p class="text-center text-4xl atomic flex justify-centers text-[#D080EC]">
+          me mira como si estuviera loca, ¿y qué? <br>
+          a callarle la boca ya me acostumbré <br>
+          actuando como si supiera meno' 'e lo que sé <br>
+          yo no peleo por cuero, mami, quédate con él <br>
+        </p>
+      </div>
     </section>
-    <hr>
+
+    <section class="m-4 flex flex-col gap-6 md:flex-row-reverse md:gap-8 xl:gap-32 items-center justify-center">
+      <img src="assets/header2.jpg" alt="Cazzu concert" class="rounded-xl w-[32rem]">
+      <div class="flex justify-center align-center min-">
+        <p class="text-center text-4xl atomic flex justify-centers text-[#50f533]">
+          será mi flow, o mi piquete o mis rima' <br>
+          disparada' como fulete <br>
+          o que ando siempre fresca 24/7 <br>
+          voy a matarlo' si alguno 'e esto' se mete <br>
+        </p>
+      </div>
+    </section>
+
     <footer class="flex justify-center mt-6">
       <a href="index.html">
         <i class="fa-solid fa-house text-4xl text-white house"></i>
       </a>
     </footer>
-  </font> </body>
+  </font>
+
+  <script src="nav.js"></script>
+</body>
+
 </html>
