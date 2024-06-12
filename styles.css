@@ -105,6 +105,7 @@ a:visited {
 
 .navitem {
   padding: 1rem 2rem;
+  border-radius: 5px;
   transition: color 0.5s ease;
 }
 
@@ -115,6 +116,11 @@ a:visited {
   outline-offset: 0.2em;
 }
 
+.navitem > a {
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
 .navitem:hover > a {
   transition: color 0.3s ease;
   color: white;
@@ -122,6 +128,8 @@ a:visited {
 
 .navbar {
   width: 50%;
+  outline: solid #D080EC;
+  transition: all 0.2s ease-out;
   animation: popup 0.2s ease-out;
 }
 
@@ -145,4 +153,9 @@ hr {
     text-align: center;
     padding: 1rem;
   }
+}
+
+::selection {
+  color: white;
+  background: #D080EC;
 }
