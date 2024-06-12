@@ -11,3 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
      nav.classList.toggle('active');
   });
 });
+
+const $ = (query) => {
+  return document.querySelector(query);
+};
+
+console.log($('#nav'));
