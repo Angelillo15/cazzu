@@ -29,19 +29,19 @@ const partial_nav = `
           </button>
         </li>
       </ul>
-`
+`;
 
-document.addEventListener('DOMContentLoaded', function() {
-  const nav = $('#nav');
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = $("#nav");
   nav.innerHTML = partial_nav;
-  const activator = $('#nav-active');
-  const close = $('#close')
-  
-  close.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });  
+  const activator = $("#nav-active");
+  const close = $("#close");
 
-  activator.addEventListener('click', () => {
-    nav.classList.toggle('active');
+  close.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  activator.addEventListener("click", () => {
+    nav.classList.toggle("active");
   });
 });
