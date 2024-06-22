@@ -101,6 +101,7 @@ const hits = [
 ]
 
 document.addEventListener("DOMContentLoaded", function () {
+  // @ts-ignore
   const hitsContainer = $(".hits-container");
 
   hits.forEach((hit) => {

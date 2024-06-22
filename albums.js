@@ -62,6 +62,7 @@ const getAlbumSongsList = (album) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+  // @ts-ignore
   const albumContainer = $(".album-container");
 
   albums.forEach((album) => {
