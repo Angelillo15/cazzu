@@ -1,3 +1,11 @@
+// @ts-check
+
+/**
+ * Returs the album html
+ * @param {Album} album the album object 
+ * @param {string} id the id of the album
+ * @returns {string} the album html
+ */
 const getAlbum = (album, id) => {
   return `
       <div class="flex flex-col justify-center align-center bg-stone-800 p-2 rounded-xl cursor-pointer" id="nav-active" data-toggle=".nav-${id}">
@@ -24,6 +32,11 @@ const getAlbum = (album, id) => {
   `;
 };
 
+/**
+ * Get the songs list of an album as html
+ * @param {Album} album 
+ * @returns {string} the songs list as html
+ */
 const getAlbumSongsList = (album) => {
   var sb = "";
 
@@ -53,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   albums.forEach((album) => {
     const node = document.createElement("div");
+    // @ts-ignore
     node.innerHTML = getAlbum(album, album.title.replaceAll(" ", "-"));
     albumContainer.appendChild(node);
   });

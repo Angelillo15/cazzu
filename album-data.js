@@ -1,3 +1,12 @@
+// @ts-check
+
+/**
+ * @typedef {Object} Album
+ * @property {string} image
+ * @property {string} title
+ * @property {string} url
+ * @property {Array<{name: string, authors: string}>} songs
+ */
 const albums = [
   {
     image: "assets/albums/1-nena-trampa-deluxe.jpg",

@@ -1,3 +1,5 @@
+// @ts-check
+
 const $ = (query) => {
   return document.querySelector(query);
 };
@@ -40,19 +42,32 @@ const partial_nav = `
       </ul>
 `;
 
+/**
+ * Using the current page, get the next page in the pages array
+ * @returns {string} The next page in the pages array
+ */
 const getNextPageWithCurrent = () => {
   var currentPage = window.location.pathname;
-  currentPage = currentPage.split("/").pop();
+  currentPage = currentPage.split("/").pop() || "index.html";
   return getNextPage(currentPage);
 }
 
+/**
+ * Using the current page, get the previous page in the pages array
+ * @returns {string} The previous page in the pages array
+ */
 const getPreviousPageWithCurrent = () => {
   var currentPage = window.location.pathname;
-  currentPage = currentPage.split("/").pop();
+  currentPage = currentPage.split("/").pop() || "index.html";
 
   return getPreviousPage(currentPage);
 }
 
+/**
+ * Get the next page in the pages array
+ * @param {string} currentPage The current page
+ * @returns {string} The next page in the pages array
+ */
 const getNextPage = (currentPage) => {
   const currentPageIndex = pages.indexOf(currentPage);
   const nextPageIndex = currentPageIndex + 1;
@@ -64,6 +79,11 @@ const getNextPage = (currentPage) => {
   return pages[nextPageIndex];
 };
 
+/**
+ * Get the previous page in the pages array
+ * @param {string} currentPage The current page
+ * @returns {string} The previous page in the pages array
+ */
 const getPreviousPage = (currentPage) => {
   const currentPageIndex = pages.indexOf(currentPage);
   const previousPageIndex = currentPageIndex - 1;
@@ -102,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   closers.forEach((el) => {
     el.addEventListener("click", () => {
+      // @ts-ignore
       const elementQuery = el.dataset.toggle;
       const element = $(elementQuery);
       element.classList.toggle("active")
@@ -110,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   activators.forEach((el) => {
     el.addEventListener("click", () => {
+      // @ts-ignore
       const elementQuery = el.dataset.toggle;
       const element = $(elementQuery);
       element.classList.toggle("active")

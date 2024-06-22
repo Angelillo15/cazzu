@@ -1,3 +1,20 @@
+// @ts-check
+
+/**
+ * @typedef {Object} Hit
+ * @property {string} name
+ * @property {string} authors
+ * @property {string} image
+ * @property {string} url
+ * @property {string} content
+ */
+
+/**
+ * Get the hit html content
+ * @param {Hit} hit 
+ * @param {string} id 
+ * @returns {string} The hit html content
+ */
 const getHit = (hit, id) => {
   return `
     <div class="flex flex-col justify-center align-center bg-stone-800 p-2 rounded-xl cursor-pointer" id="nav-active" data-toggle=".nav-${id}">
@@ -28,6 +45,11 @@ const getHit = (hit, id) => {
   `;
 };
 
+/**
+ * @type {Array<Hit>}
+ * The hits data
+ * 
+ */
 const hits = [
   {
     name: "Loca",
@@ -83,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hits.forEach((hit) => {
     const node = document.createElement("div");
+    // @ts-ignore
     node.innerHTML = getHit(hit, hit.name.replaceAll(" ", "-"));
     hitsContainer.appendChild(node);
   });
