@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", () => {
       const elementQuery = el.dataset.toggle;
       const element = $(elementQuery);
-      console.log(elementQuery);
       element.classList.toggle("active")
     })
   });
@@ -50,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", () => {
       const elementQuery = el.dataset.toggle;
       const element = $(elementQuery);
-      console.log(elementQuery);
       element.classList.toggle("active")
     })
   });
