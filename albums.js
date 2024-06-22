@@ -1,4 +1,4 @@
-const get = (album, id) => {
+const getAlbum = (album, id) => {
   return `
       <div class="flex flex-col justify-center align-center bg-stone-800 p-2 rounded-xl cursor-pointer" id="nav-active" data-toggle=".nav-${id}">
         <img src="${album.image}" class="w-[350px] rounded-xl">
@@ -7,7 +7,7 @@ const get = (album, id) => {
       <div class="modal nav-${id}">
         <div>
           <ul class="flex flex-wrap flex-col bg-stone-900 min-w-[90vw] max-w-[90vw] md:min-w-[30vw] justify-center p-2 rounded-xl gap-x-16 gap-y-4 p-4">
-            ${getList(album)}
+            ${getAlbumSongsList(album)}
             <li>
               <a href="${album.url}" target="_blank" class="flex justify-center">
                 <img class="h-24" src="assets/spotify.png">
@@ -24,7 +24,7 @@ const get = (album, id) => {
   `;
 };
 
-const getList = (album) => {
+const getAlbumSongsList = (album) => {
   var sb = "";
 
   if (album.songs === null || album.songs === undefined) {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   albums.forEach((album) => {
     const node = document.createElement("div");
-    node.innerHTML = get(album, album.title.replaceAll(" ", "-"));
+    node.innerHTML = getAlbum(album, album.title.replaceAll(" ", "-"));
     albumContainer.appendChild(node);
   });
 });
