@@ -11,7 +11,7 @@ const partial_nav = `
           <a class="text-3xl" href="biografia.html"><b> Biografia </b></a>
         </li>
         <li class="navitem">
-          <a class="text-3xl" href="index.html"><b> Discografia </b></a>
+          <a class="text-3xl" href="discografia.html"><b> Discografia </b></a>
         </li>
         <li class="navitem">
           <a class="text-3xl" href="index.html"><b> Hits globales </b></a>
@@ -24,7 +24,7 @@ const partial_nav = `
         </li>
         <hr>
         <li>
-          <button class="text-3xl text-[#D080EC] hover:text-white navitem font-bold" id="close">
+          <button class="text-3xl text-[#D080EC] hover:text-white navitem font-bold" id="close" data-toggle="#nav">
             Cerrar
           </button>
         </li>
@@ -34,14 +34,24 @@ const partial_nav = `
 document.addEventListener("DOMContentLoaded", function () {
   const nav = $("#nav");
   nav.innerHTML = partial_nav;
-  const activator = $("#nav-active");
-  const close = $("#close");
+  const activators = document.querySelectorAll("#nav-active");
+  const closers = document.querySelectorAll("#close");
 
-  close.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  closers.forEach((el) => {
+    el.addEventListener("click", () => {
+      const elementQuery = el.dataset.toggle;
+      const element = $(elementQuery);
+      console.log(elementQuery);
+      element.classList.toggle("active")
+    })
   });
 
-  activator.addEventListener("click", () => {
-    nav.classList.toggle("active");
+  activators.forEach((el) => {
+    el.addEventListener("click", () => {
+      const elementQuery = el.dataset.toggle;
+      const element = $(elementQuery);
+      console.log(elementQuery);
+      element.classList.toggle("active")
+    })
   });
 });
