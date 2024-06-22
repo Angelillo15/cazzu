@@ -26,10 +26,10 @@ const partial_nav = `
           <a class="text-3xl" href="hits.html"><b> Hits globales </b></a>
         </li>
         <li class="navitem">
-          <a class="text-3xl" href="index.html"><b> Movistar Arena </b></a>
+          <a class="text-3xl" href="movistar-arena.html"><b> Movistar Arena </b></a>
         </li>
         <li class="navitem">
-          <a class="text-3xl" href="index.html"><b> Premios </b></a>
+          <a class="text-3xl" href="premios.html"><b> Premios </b></a>
         </li>
         <hr>
         <li>
